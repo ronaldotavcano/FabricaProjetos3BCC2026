@@ -197,11 +197,16 @@ git push origin feature/NomeDaSuaFeature
 
 | Pessoa | Papel | Branch | Responsabilidades |
 |--------|-------|--------|-------------------|
-| Ronaldo (Tech Lead) | Docs + Revisão | `feat/docs` | README, testes end-to-end, slides da apresentação |
-| Vitão | Backend | `feat/backend` | FastAPI, rotas REST, conectar agente à API |
-| Sérgio | Frontend | `feat/frontend` | Telas React, campo de busca, tabela de resultados |
-| Anão | Integrações | `feat/agente` | Configurar Hunter.io, variáveis de ambiente, testar APIs |
-| Matheus | Agente IA + QA | `feat/agent` | Montar agente LangChain, configurar Tavily, revisar PRs | 
+| Ronaldo (Tech Lead) | Docs + Revisão | `feat/docs` | README, testes end-to-end, slides da apresentação, revisar PRs |
+| Vitão | Backend | 
+| Matheus | Backend |
+
+| Sérgio | Frontend | 
+| Anão | Frontend | 
+
+(backend) --> Criar o agente, configurar apis, criar as variáves de ambiente do backend, etc...
+
+(frontend) --> Criar as interfaces gráficas, consultar apis (puxar dados e enviar dados para o backend), etc...
 
 ---
 
