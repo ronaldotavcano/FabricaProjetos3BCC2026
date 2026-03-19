@@ -1,4 +1,4 @@
-# 🤖 C-Level Finder — Agente de IA
+#  C-Level Finder — Agente de IA
 
 > Agente inteligente que busca automaticamente os executivos C-Level de qualquer empresa, retornando nome, cargo, LinkedIn e email corporativo.
 
@@ -42,6 +42,8 @@ O **C-Level Finder** é um agente de IA desenvolvido como trabalho escolar. O us
 ```
 
 ### Responsabilidade de cada camada
+
+(Todos os nomes de ferramenta, exceto o React são opcionais, não necessariamente são as tecnologias que vamos usar, é só um exemplo)
 
 | Camada | Tecnologia | Função |
 |--------|------------|--------|
@@ -109,6 +111,11 @@ meu-agente-ia/
 
 ### Pré-requisitos
 
+Pre-requisito do front:
+
+Baixar o node numa versão lts (long term supported), o meu está na v22.11.0
+link --> https://nodejs.org (ou veja qualquer video de baixar o node.js)
+
 ### Backend
 
 ### Frontend
@@ -146,10 +153,8 @@ HUNTER_API_KEY=sua_chave_aqui
 ```
 main                  → Versão final do projeto (releases)
   └── develop         → Branch de integração (GitHub remoto)
-        ├── develop-frontend  → Integração do frontend
-        │     └── feature/nome-da-feature
-        └── develop-backend   → Integração do backend
-              └── feature/nome-da-feature
+        └── feature/nome-da-feature
+        └── feature/nome-da-feature
 ```
 
 ### Fluxo de trabalho (passo a passo)
