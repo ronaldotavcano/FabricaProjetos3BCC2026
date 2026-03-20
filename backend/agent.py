@@ -19,6 +19,7 @@ def executar_agente_search(nome_empresa: str):
         prompt = f"Com base nestes dados: {resultados_web}, liste apenas nomes e cargos C-Level da {nome_empresa}."
         resposta = llm.invoke(prompt)
         
+        
         return {"sucesso": True, "resultado": resposta.content}
     except Exception as e:
         return {"sucesso": False, "erro": str(e)}
