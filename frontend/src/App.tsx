@@ -2,11 +2,11 @@ import { useState } from "react";
 import Home from "./pages/Home";
 import SearchBox from "./components/Searchbox";
 import Results from "./components/Results";
-import type { Executive } from "./pages/Executive";
+import type { SearchResponse } from "./pages/Executive";
 
 export default function App() {
   const [entered, setEntered] = useState<boolean>(false);
-  const [results, setResults] = useState<Executive[]>([]);
+  const [results, setResults] = useState<SearchResponse | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
   if (!entered) {
@@ -14,20 +14,34 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center p-10">
-      <h1 className="text-4xl font-bold mb-6">
-        🚀 C-Level Finder
-      </h1>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <div className="flex flex-col items-center p-10">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-5xl font-bold mb-3 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+            🚀 C-Level Finder
+          </h1>
+          <p className="text-gray-400">
+            Encontre informações de executivos C-Level de qualquer empresa
+          </p>
+        </div>
 
-      <SearchBox setResults={setResults} setLoading={setLoading} />
+        {/* Search Box */}
+        <SearchBox setResults={setResults} setLoading={setLoading} />
 
-      {loading && (
-        <p className="mt-4 animate-pulse text-yellow-400">
-          Buscando executivos...
-        </p>
-      )}
+        {/* Loading */}
+        {loading && (
+          <div className="mt-8 flex flex-col items-center">
+            <div className="loading-spinner"></div>
+            <p className="mt-4 text-yellow-400 animate-pulse">
+              🔍 Buscando executivos...
+            </p>
+          </div>
+        )}
 
-      <Results results={results} />
+        {/* Results */}
+        {!loading && <Results results={results} />}
+      </div>
     </div>
   );
 }
