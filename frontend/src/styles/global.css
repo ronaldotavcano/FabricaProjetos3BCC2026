@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Seu CSS customizado aqui */
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .executive-card {
+    @apply bg-gray-800/50 backdrop-blur-sm border border-yellow-500/10 rounded-2xl 
+           transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500/30;
+  }
+  
+  .contact-link {
+    @apply flex items-center gap-2 text-gray-300 text-sm p-2 rounded-lg 
+           transition-all duration-200 hover:bg-yellow-500/10 hover:text-yellow-400 hover:translate-x-1;
+  }
+}
