@@ -1,64 +1,191 @@
-🚀 Setup do Projeto Fullstack
+# teste
 
-===========================
-📁 BACKEND
-===========================
+<aside>
+💡
 
-1. Acessar a pasta
+Guia rápido para configurar **Backend (FastAPI)** e **Frontend (Vite/React)**.
+
+</aside>
+
+## 1) Backend (Python + FastAPI)
+
+### 1.1 Entrar na pasta do backend
+
+```bash
+cd backend
+```
+
+### 1.2 Criar ambiente virtual
+
+```bash
+python -m venv venv
+```
+
+### 1.3 Ativar o ambiente
+
+- **Windows**
+    
+    ```bash
+    venv\Scripts\activate
+    ```
+    
+- **Linux/Mac**
+    
+    ```bash
+    source venv/bin/activate
+    ```
+    
+
+> Se aparecer **(venv)** no terminal, o ambiente foi ativado com sucesso.
+> 
+
+### 1.4 Instalar dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+> Se você ainda não tiver um `requirements.txt`, instale o básico e depois gere um:
+> 
+
+> `bash
+> 
+
+> pip install fastapi uvicorn python-dotenv
+> 
+
+> pip freeze > requirements.txt
+> 
+
+> `
+> 
+
+### 1.5 Configurar variáveis de ambiente
+
+Crie um arquivo `.env` na raiz da pasta `backend`:
+
+```
+GROQ_API_KEY=sua_api_key_aqui
+TAVILY_API_KEY=sua_api_key_aqui
+```
+
+### 1.6 Executar o servidor
+
+```bash
+uvicorn main:app --reload
+```
+
+---
+
+## 2) Frontend (Node.js + React/Vite)
+
+### 2.1 Entrar na pasta do frontend
+
+```bash
+cd frontend
+```
+
+### 2.2 Instalar dependências
+
+```bash
+npm ci
+```
+
+### 2.3 Executar o projeto
+
+```bash
+npm run dev
+```
+
+---
+
+## (Opcional) Gerar o arquivo `.md` via script
+
+Se quiser gerar esse conteúdo em um arquivo Markdown automaticamente:
+
+```python
+content = """# 🚀 Guia de Configuração do Projeto
+
+Guia rápido para configurar Backend (FastAPI) e Frontend (Vite/React).
+
+## 1) Backend (Python + FastAPI)
+
+### 1.1 Entrar na pasta do backend
+```
+
 cd backend
 
-2. Criar ambiente virtual
+```
+
+### 1.2 Criar ambiente virtual
+```
+
 python -m venv venv
 
-3. Ativar o ambiente
+```
 
-Windows:
+### 1.3 Ativar o ambiente
+- Windows
+```
+
 venv\Scripts\activate
 
-Linux/Mac:
+```
+- Linux/Mac
+```
+
 source venv/bin/activate
 
-Se aparecer (venv) no terminal → deu certo
+```
 
----------------------------
+### 1.4 Instalar dependências
+```
 
-4. Instalar dependências
-pip install fastapi uvicorn python-dotenv
 pip install -r requirements.txt
 
----------------------------
+```
 
-5. Criar arquivo .env
+### 1.5 Configurar variáveis de ambiente
+Crie um arquivo `.env` na raiz da pasta `backend`:
+```
 
-Crie um arquivo chamado .env dentro da pasta backend e adicione:
+GROQ_API_KEY=sua_api_key_aqui
 
-GROQ_API_KEY=sua_api_key
-TAVILY_API_KEY=sua_api_key
+TAVILY_API_KEY=sua_api_key_aqui
 
----------------------------
+```
 
-6. Rodar o backend
+### 1.6 Executar o servidor
+```
+
 uvicorn main:app --reload
 
-===========================
-🎨 FRONTEND
-===========================
+```
 
-1. Acessar a pasta
+## 2) Frontend (Node.js + React/Vite)
+
+### 2.1 Entrar na pasta do frontend
+```
+
 cd frontend
 
-2. Instalar dependências
+```
+
+### 2.2 Instalar dependências
+```
+
 npm ci
 
----------------------------
+```
 
-3. Rodar o frontend
+### 2.3 Executar o projeto
+```
+
 npm run dev
 
-===========================
-✅ OBSERVAÇÕES
-===========================
+```
+"""
 
-- O arquivo .env NÃO deve ser enviado para o Git
-- Use .env.example para compartilhar estrutura
-- O backend deve estar rodando antes do frontend
+with open("guia-configuracao-projeto.md", "w", encoding="utf-8") as f:
+	f.write(content)
+```
