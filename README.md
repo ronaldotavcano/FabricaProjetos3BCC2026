@@ -22,7 +22,7 @@
 
 O **C-Level Finder** é um agente de IA desenvolvido como trabalho escolar. O usuário digita o nome de uma empresa e o agente retorna uma lista com todos os executivos C-Level (CEO, CFO, CTO, COO etc.) com seus contatos disponíveis publicamente.
 
-**⚠️ Limitação importante:** Telefone pessoal e email pessoal de executivos são protegidos pela LGPD e raramente disponíveis publicamente. O agente foca em: LinkedIn, emails no formato corporativo padrão e telefone geral da empresa.
+**Limitação importante:** Telefone pessoal e email pessoal de executivos são protegidos pela LGPD e raramente disponíveis publicamente. O agente foca em: LinkedIn, emails no formato corporativo padrão e telefone geral da empresa.
 
 ---
 
@@ -55,7 +55,7 @@ O **C-Level Finder** é um agente de IA desenvolvido como trabalho escolar. O us
 
 ---
 
-## 🔄 Fluxo de Dados
+##  Fluxo de Dados
 
 ```
 1. Usuário digita "Microsoft" no React
@@ -74,37 +74,6 @@ O **C-Level Finder** é um agente de IA desenvolvido como trabalho escolar. O us
       ↓
 8. React exibe tabela com nome, cargo, LinkedIn e email
 ```
-
----
-
-## 📁 Estrutura de Pastas
-
-```
-meu-agente-ia/
-│
-├── backend/
-│   ├── main.py           # FastAPI — entrada da aplicação e rotas
-│   ├── agent.py          # Lógica do agente LangChain
-│   ├── tools.py          # Ferramentas do agente (Tavily, Hunter.io)
-│   ├── models.py         # Modelos de dados (input/output da API)
-│   ├── requirements.txt  # Dependências Python
-│   └── .env              # Chaves de API (nunca sobe pro GitHub!)
-│
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── components/
-│   │   │   ├── SearchBar.jsx
-│   │   │   └── ResultsTable.jsx
-│   │   └── main.jsx
-│   ├── public/
-│   ├── package.json
-│   └── .env
-│
-├── .gitignore
-└── README.md
-```
-
 ---
 
 ## Como Rodar
@@ -124,25 +93,15 @@ link --> https://nodejs.org (ou veja qualquer video de baixar o node.js)
 # Entrar na pasta do frontend
 cd frontend
 
+# Baixar depêndencias
+
+npm install
+
 # Rodar em modo desenvolvimento
 npm run dev
 ```
 
 O frontend ficará disponível em `http://localhost:5173`
-
----
-
-##  Variáveis de Ambiente
-
-Crie um arquivo `.env` dentro da pasta `backend/`:
-
-```env
-OPENAI_API_KEY=sua_chave_aqui
-TAVILY_API_KEY=sua_chave_aqui
-HUNTER_API_KEY=sua_chave_aqui
-```
-
-> **Nunca** faça commit do arquivo `.env`. Ele já está no `.gitignore`.
 
 ---
 
@@ -192,7 +151,7 @@ git push origin feature/NomeDaSuaFeature
 ### Regras
 
 - ❌ Nunca commite direto na `main` ou `develop`
-- ✅ Sempre crie sua branch a partir da `develop` atualizada
+- ✅ Sempre crie sua branch a partir da `main` ou `develop` atualizada
 - ✅ Todo PR precisa de aprovação do Tech Lead antes do merge
 - ✅ Descreva claramente o que foi feito no PR
 
