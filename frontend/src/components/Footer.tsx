@@ -8,8 +8,8 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-6 items-center">
-          <span> <img src="../../public/github.png" alt="Github icon" className="bg-[#FFFFFF] h-8 w-8 rounded-3xl" /> </span>
-          <a href="https://github.com/ronaldotavcano/FabricaProjetos3BCC2026" className="text-slate-500 hover:text-blue-400 transition-colors text-md">GitHub</a>
+          <span> <img src="../../github.png" alt="Github icon" className="bg-[#FFFFFF] h-8 w-8 rounded-3xl" /> </span>
+          <a href="https://github.com/ronaldotavcano/FabricaProjetos3BCC2026" target="_blanck" className="text-slate-500 hover:text-blue-400 transition-colors text-md">GitHub</a>
         </div>
 
       </div>
