@@ -22,7 +22,7 @@
 
 O **C-Level Finder** é um agente de IA desenvolvido como trabalho escolar. O usuário digita o nome de uma empresa e o agente retorna uma lista com todos os executivos C-Level (CEO, CFO, CTO, COO etc.) com seus contatos disponíveis publicamente.
 
-**⚠️ Limitação importante:** Telefone pessoal e email pessoal de executivos são protegidos pela LGPD e raramente disponíveis publicamente. O agente foca em: LinkedIn, emails no formato corporativo padrão e telefone geral da empresa.
+**Limitação importante:** Telefone pessoal e email pessoal de executivos são protegidos pela LGPD e raramente disponíveis publicamente. O agente foca em: LinkedIn, emails no formato corporativo padrão e telefone geral da empresa.
 
 ---
 
@@ -55,7 +55,7 @@ O **C-Level Finder** é um agente de IA desenvolvido como trabalho escolar. O us
 
 ---
 
-## 🔄 Fluxo de Dados
+##  Fluxo de Dados
 
 ```
 1. Usuário digita "Microsoft" no React
@@ -77,7 +77,7 @@ O **C-Level Finder** é um agente de IA desenvolvido como trabalho escolar. O us
 
 ---
 
-## 📁 Estrutura de Pastas
+##  Estrutura de Pastas
 
 ```
 meu-agente-ia/
@@ -118,15 +118,13 @@ link --> https://nodejs.org (ou veja qualquer video de baixar o node.js)
 
 ### Backend
 
-## ▶️ Como Rodar
-
 > **Pré-requisitos:** Tenha instalado antes de começar:
 > - [Python 3.10+](https://www.python.org/downloads/) — marque "Add Python to PATH" na instalação
 > - [Node.js LTS](https://nodejs.org) — versão recomendada: v22.x
 
 ---
 
-### 🔧 Backend (manual)
+### Backend (manual)
 
 ```bash
 # 1. Entrar na pasta do backend
@@ -156,7 +154,7 @@ uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 
 ---
 
-### ⚡ Backend (atalho com .bat)
+### Backend (atalho com .bat)
 
 Se estiver no Windows, pode usar o script automático — ele faz todos os passos acima de uma vez:
 
@@ -251,14 +249,13 @@ git push origin feature/NomeDaSuaFeature
 
 ## Time
 
-| Pessoa | Papel | Branch | Responsabilidades |
-|--------|-------|--------|-------------------|
-| Ronaldo (Tech Lead) | Docs + Revisão | `feat/docs` | README, testes end-to-end, slides da apresentação, revisar PRs |
-| Vitão | Backend | 
-| Matheus | Backend |
-
-| Sérgio | Frontend | 
-| Anão | Frontend | 
+| Pessoa | Papel | Responsabilidades |
+|--------|-------|-------------------|
+| Ronaldo (Tech Lead) | Docs + Revisão | README, testes end-to-end, slides da apresentação, revisar PRs |
+| Vitão | Backend | Criação dos Endpoints + Agente|
+| Matheus | Backend | Criação dos Endpoints + Agente |
+| Sérgio | Frontend | Criação das Páginas Web |
+| Anão | Frontend | Criação das Páginas Web |
 
 (backend) --> Criar o agente, configurar apis, criar as variáves de ambiente do backend, etc...
 
