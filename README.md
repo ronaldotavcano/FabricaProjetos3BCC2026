@@ -118,6 +118,57 @@ link --> https://nodejs.org (ou veja qualquer video de baixar o node.js)
 
 ### Backend
 
+## ▶️ Como Rodar
+
+> **Pré-requisitos:** Tenha instalado antes de começar:
+> - [Python 3.10+](https://www.python.org/downloads/) — marque "Add Python to PATH" na instalação
+> - [Node.js LTS](https://nodejs.org) — versão recomendada: v22.x
+
+---
+
+### 🔧 Backend (manual)
+
+```bash
+# 1. Entrar na pasta do backend
+cd backend
+
+# 2. Criar o ambiente virtual (faz uma "caixa separada" para as dependências do projeto)
+python -m venv .venv
+
+# 3. Ativar o ambiente virtual
+# Windows:
+.venv\Scripts\activate
+# Mac/Linux:
+source .venv/bin/activate
+
+# 4. Instalar as dependências listadas no requirements.txt
+pip install -r requirements.txt
+
+# 5. Criar o arquivo de variáveis de ambiente (veja a seção Variáveis de Ambiente)
+# Copie o .env.example ou crie manualmente o arquivo .env
+
+# 6. Subir o servidor
+uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+> O backend ficará disponível em `http://localhost:8000`
+> A documentação interativa da API estará em `http://localhost:8000/docs`
+
+---
+
+### ⚡ Backend (atalho com .bat)
+
+Se estiver no Windows, pode usar o script automático — ele faz todos os passos acima de uma vez:
+
+```bash
+# Na raiz do projeto, basta dar dois cliques no arquivo ou rodar:
+.\rodar.bat
+```
+
+> O `.bat` já cria o `.venv`, instala as dependências e sobe o servidor automaticamente.
+
+---
+
 ### Frontend
 
 ```bash
