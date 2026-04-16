@@ -7,7 +7,7 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 load_dotenv()
 
 def executar_agente_search(nome_empresa: str):
-    """Função que o Backend (Victor) vai chamar para obter os dados."""
+    
     try:
         llm = ChatGroq(model_name="llama-3.3-70b-versatile")
         search = TavilySearchResults(k=5)

@@ -5,7 +5,7 @@ export default function Header() {
     <header className="bg-[#07090f] h-20 border-b border-slate-800/50 backdrop-blur-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto h-full px-8 flex justify-between items-center">
     
-        <div className="flex items-center gap-2">      
+        <div className="flex items-center gap-2 ">      
           <span className="text-white font-semibold tracking-tight text-2xl">
             Finder<span className="text-blue-500">Agent</span>
           </span>
