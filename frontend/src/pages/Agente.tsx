@@ -26,12 +26,12 @@ export default function Agente() {
           <input
             type="text"
             placeholder="Digite o nome da empresa"
-            className="w-full max-w-[420px] h-14 px-6 text-2xl rounded-[5px] border-[2px] border-white bg-transparent text-white placeholder:text-slate-400 outline-none"
+            className="w-full max-w-[420px] h-13 px-6 text-2xl rounded-[6px] border-[2px] border-white bg-transparent text-white placeholder:text-slate-400 outline-none"
           />
 
           <button
             type="submit"
-            className="w-[120px] h-14 text-2xl rounded-[5px] border-[2px] border-white bg-blue-500 text-white transition hover:bg-white hover:text-black"
+            className="w-[110px] h-13 text-2xl rounded-[6px] border-[2px] border-white bg-blue-500 text-white transition hover:bg-white hover:text-black"
           >
             Buscar
           </button>
