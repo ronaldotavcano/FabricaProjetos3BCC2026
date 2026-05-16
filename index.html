@@ -1,301 +1,350 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Bernardo | Advocacia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>João Batista Bernardo - Advogado Previdenciário</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ============================================================
-         POPUP: Aviso Importante
-         ============================================================ -->
-    <div class="popup-overlay" id="popupAviso">
-        <div class="popup-box">
-            <button class="popup-close" onclick="fecharPopup()" aria-label="Fechar">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="popup-logo">
-                <div class="popup-logo-text">JB</div>
-            </div>
-            <h3 class="popup-titulo">AVISO IMPORTANTE</h3>
-            <div class="popup-destaque">
-                <i class="fas fa-exclamation-triangle"></i>
-                CUIDADO COM GOLPES
-            </div>
-            <p class="popup-texto">
-                Este escritório <strong>não solicita pagamentos</strong> para liberação de valores judiciais, RPV, precatórios, alvarás ou certidões.
-            </p>
-            <p class="popup-texto">
-                Se receber esse tipo de contato, <span class="popup-nao">não efetue qualquer pagamento</span> e entre em contato imediatamente pelos nossos canais oficiais.
-            </p>
-            <a href="https://wa.me/5500000000000" class="btn btn-gold popup-btn" target="_blank">
-                <i class="fab fa-whatsapp" style="font-size:1.4rem;"></i>
-            </a>
-            <p class="popup-rodape">SUA SEGURANÇA É NOSSA PRIORIDADE</p>
-        </div>
-    </div>
-
-    <a href="https://wa.me/5500000000000" class="whatsapp-fixed" target="_blank" aria-label="Falar no WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+<!-- POPUP ANTI-GOLPE -->
+<div class="popup-overlay" id="antiGolpePopup">
+  <div class="popup-box">
+    <button class="popup-close" onclick="document.getElementById('antiGolpePopup').style.display='none'" aria-label="Fechar">×</button>
+    <div class="popup-logo-circle">JB</div>
+    <h2>Aviso Importante</h2>
+    <div class="popup-alert-banner">⚠️ Cuidado com Golpes</div>
+    <p>Este escritório <strong>não solicita pagamentos</strong> para liberação de valores judiciais, RPV, precatórios, alvarás ou certidões.</p>
+    <p>Se receber esse tipo de contato, <strong>não efetue qualquer pagamento</strong> e entre em contato imediatamente pelos nossos canais oficiais.</p>
+    <a href="https://wa.me/5514991658080" class="popup-wa-btn" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar com o escritório
     </a>
+    <p class="popup-footer-text">Sua Segurança é Nossa Prioridade</p>
+  </div>
+</div>
 
-    <header class="main-header">
-        <div class="container header-content">
-            <div class="logo-area">
-                <div class="logo-monogram">JB</div>
-                <div class="logo-text">
-                    <h1>JOÃO BERNARDO</h1>
-                    <span>ADVOCACIA E ASSESSORIA JURÍDICA</span>
-                </div>
-            </div>
-            <nav class="nav-actions">
-                <a href="#contato-form" class="btn btn-gold">TOQUE PARA SER ATENDIDO</a>
-            </nav>
+<!-- HEADER -->
+<header>
+  <div class="logo-area">
+    <div class="logo-box">JB</div>
+    <div class="logo-text">
+      <h1>JOÃO BATISTA BERNARDO</h1>
+      <span class="oab-tag">ADVOGADO</span>
+      <span class="oab-num">OAB/SP 531.584</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="header-badge">
+      <svg width="30" height="30" viewBox="0 0 38 38" fill="none">
+        <circle cx="19" cy="19" r="18" stroke="#c9a84c" stroke-width="1.5" fill="rgba(201,168,76,0.08)"/>
+        <circle cx="19" cy="14" r="4" stroke="#c9a84c" stroke-width="1.6"/>
+        <path d="M10 28c0-5 4-8 9-8s9 3 9 8" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <div class="texts">
+        <p class="label">ATENDIMENTO ONLINE</p>
+        <p class="sublabel">EM TODO O BRASIL</p>
+      </div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="header-brasil">
+      <svg width="36" height="26" viewBox="0 0 36 26" fill="none">
+        <rect width="36" height="26" rx="3" fill="#009C3B"/>
+        <polygon points="18,3 33,13 18,23 3,13" fill="#FFDF00"/>
+        <circle cx="18" cy="13" r="5.5" fill="#002776"/>
+        <path d="M12.5,13 Q18,10.5 23.5,13" stroke="white" stroke-width="1.2" fill="none"/>
+        <circle cx="15" cy="12" r="0.6" fill="white"/>
+        <circle cx="18" cy="11" r="0.6" fill="white"/>
+        <circle cx="21" cy="12" r="0.6" fill="white"/>
+        <circle cx="17" cy="14" r="0.6" fill="white"/>
+        <circle cx="20" cy="14.5" r="0.6" fill="white"/>
+      </svg>
+      <div class="header-brasil-texts">
+        <span class="brasil-label">BRASIL</span>
+        <span class="brasil-sub">Todo o território</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h2>TEVE BENEFÍCIO<br>NEGADO PELO <span class="highlight">INSS?</span></h2>
+      <h3>PODEMOS RECORRER E BUSCAR<br>O <span class="gold">SEU DIREITO!</span></h3>
+      <p>Atendimento especializado em Direito Previdenciário<br>para todo o Brasil, 100% online.</p>
+      <a href="https://wa.me/5514991658080" class="btn-wa" target="_blank">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        QUERO ANALISAR MEU CASO
+      </a>
+      <p class="secure-note">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7a94b8" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Atendimento seguro e sigiloso
+      </p>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="assets/img/joao1.png" alt="Dr. João Batista Bernardo">
+      <div class="advocate-card">
+        <p>JOÃO BATISTA BERNARDO</p>
+        <span>Advogado</span>
+        <span>OAB/SP 531.584</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SITUATIONS -->
+<section class="situations">
+  <h2 class="section-title">VOCÊ PASSA POR <span class="gold">ALGUMA DESSAS SITUAÇÕES?</span></h2>
+  <div class="situations-grid">
+    <div class="sit-card">
+      <div class="sit-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="1.7"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="14" y2="12"/><circle cx="17" cy="18" r="3.5" fill="#e74c3c" stroke="none"/><line x1="15.6" y1="16.6" x2="18.4" y2="19.4" stroke="white" stroke-width="1.4"/><line x1="18.4" y1="16.6" x2="15.6" y2="19.4" stroke="white" stroke-width="1.4"/></svg></div>
+      <p>Aposentadoria negada</p>
+    </div>
+    <div class="sit-card">
+      <div class="sit-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="1.7"><circle cx="12" cy="5" r="2.5"/><path d="M9 8 Q8 12 9 17 L11 22 M15 8 Q16 12 15 17 L13 22" stroke-linecap="round"/><path d="M9 8 Q12 7 15 8"/><path d="M9 12 Q12 15.5 15 12" stroke="#e74c3c" stroke-width="1.6"/><line x1="9" y1="12" x2="11.5" y2="9.5" stroke="#e74c3c" stroke-width="1.3"/></svg></div>
+      <p>Auxílio-doença cortado</p>
+    </div>
+    <div class="sit-card">
+      <div class="sit-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="1.7"><circle cx="12" cy="4" r="2.2"/><path d="M12 6.5 L12 13 L16 13" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 10 L7 17 L17 17" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="20" r="2.2"/><circle cx="17" cy="20" r="2.2"/></svg></div>
+      <p>LOAS/BPC indeferido</p>
+    </div>
+    <div class="sit-card">
+      <div class="sit-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="12" y2="13"/><circle cx="17.5" cy="15.5" r="2.8" fill="#e74c3c" stroke="none"/><line x1="16.4" y1="14.4" x2="18.6" y2="16.6" stroke="white" stroke-width="1.3"/><line x1="18.6" y1="14.4" x2="16.4" y2="16.6" stroke="white" stroke-width="1.3"/></svg></div>
+      <p>CNIS com erros</p>
+    </div>
+    <div class="sit-card">
+      <div class="sit-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14.5" stroke-linecap="round"/></svg></div>
+      <p>Demora no INSS</p>
+    </div>
+    <div class="sit-card">
+      <div class="sit-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="1.7"><circle cx="12" cy="7" r="3.5"/><path d="M6 21v-2a6 6 0 0 1 6-6"/><circle cx="18.5" cy="17.5" r="3" fill="#e74c3c" stroke="none"/><line x1="17.4" y1="16.4" x2="19.6" y2="18.6" stroke="white" stroke-width="1.3"/><line x1="19.6" y1="16.4" x2="17.4" y2="18.6" stroke="white" stroke-width="1.3"/></svg></div>
+      <p>Perícia injusta</p>
+    </div>
+  </div>
+  <p class="situations-note">
+    Se você se identificou com algum desses problemas, saiba que não está sozinho.<br>
+    <strong>Nós podemos te ajudar!</strong>
+  </p>
+</section>
+
+<!-- HOW WE HELP -->
+<section class="how">
+  <div class="how-inner">
+    <div class="how-image">
+      <img src="assets/img/carteira.png" alt="Carteira de Trabalho e Martelo Jurídico">
+    </div>
+    <div class="how-content">
+      <h2>COMO PODEMOS <span class="gold">TE AJUDAR</span></h2>
+      <ul class="how-list">
+        <li><span class="check-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Análise completa do seu caso</li>
+        <li><span class="check-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Identificação de erros e falhas do INSS</li>
+        <li><span class="check-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Recursos administrativos</li>
+        <li><span class="check-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Ações judiciais, quando necessário</li>
+        <li><span class="check-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Acompanhamento em todas as etapas</li>
+        <li><span class="check-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Atendimento humanizado e estratégico</li>
+      </ul>
+      <p class="how-note">Nosso objetivo é garantir o seu direito e o melhor benefício para você e sua família!</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIALS -->
+<section class="diff-strip">
+  <div class="differentials">
+    <div class="diff-card">
+      <div class="diff-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="diff-texts"><h3>ATENDIMENTO<br>100% ONLINE</h3><p>Em todo o Brasil</p></div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="diff-texts"><h3>ESPECIALISTA EM<br>DIREITO PREVIDENCIÁRIO</h3><p>Atuação exclusiva na área</p></div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17" stroke-width="3" stroke-linecap="round"/></svg></div>
+      <div class="diff-texts"><h3>EXPERIÊNCIA E<br>RESULTADOS</h3><p>Centenas de casos resolvidos</p></div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <div class="diff-texts"><h3>SEGURANÇA E<br>TRANSPARÊNCIA</h3><p>Processo claro e sigiloso</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2 class="section-title">O QUE DIZEM <span class="gold">NOSSOS CLIENTES</span></h2>
+  <div class="carousel-wrap">
+    <div class="test-grid" id="carouselGrid">
+      <div class="test-card" data-slide="0">
+        <img class="test-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Aparecida">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Meu benefício foi negado duas vezes e o doutor conseguiu reverter no recurso. Muito profissional e atencioso!"</blockquote>
+        <cite>Maria Aparecida, SP</cite>
+      </div>
+      <div class="test-card" data-slide="0">
+        <img class="test-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Carlos">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Estava há mais de 1 ano esperando a aposentadoria. Com o Dr. João, resolveu em poucos meses!"</blockquote>
+        <cite>João Carlos, MG</cite>
+      </div>
+      <div class="test-card" data-slide="0">
+        <img class="test-avatar" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sandra Regina">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Excelente profissional! Me orientou em tudo e conseguiu o LOAS para minha mãe. Gratidão eterna!"</blockquote>
+        <cite>Sandra Regina, PR</cite>
+      </div>
+      <div class="test-card" data-slide="1">
+        <img class="test-avatar" src="https://randomuser.me/api/portraits/men/54.jpg" alt="Roberto Silva">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Fui muito bem atendido. O Dr. João explicou tudo com clareza e conseguiu meu auxílio-doença rapidamente!"</blockquote>
+        <cite>Roberto Silva, RS</cite>
+      </div>
+      <div class="test-card" data-slide="1">
+        <img class="test-avatar" src="https://randomuser.me/api/portraits/women/26.jpg" alt="Luciana Ferreira">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Achei que nunca conseguiria minha aposentadoria. Com a ajuda dele, tudo foi resolvido em tempo recorde!"</blockquote>
+        <cite>Luciana Ferreira, BA</cite>
+      </div>
+      <div class="test-card" data-slide="1">
+        <img class="test-avatar" src="https://randomuser.me/api/portraits/men/71.jpg" alt="Antônio Pereira">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Profissional dedicado e honesto. Me orientou em cada etapa e o resultado foi melhor do que eu esperava!"</blockquote>
+        <cite>Antônio Pereira, GO</cite>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn" onclick="changeSlide(-1)" aria-label="Anterior">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="carousel-dots">
+        <button class="carousel-dot active" onclick="goToSlide(0)"></button>
+        <button class="carousel-dot" onclick="goToSlide(1)"></button>
+      </div>
+      <button class="carousel-btn" onclick="changeSlide(1)" aria-label="Próximo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BOTTOM -->
+<section class="cta-bottom">
+  <div class="cta-bottom-text">
+    <h2>NÃO ESPERE MAIS PARA<br>GARANTIR O SEU DIREITO!</h2>
+    <p>Fale agora com um advogado especialista.</p>
+  </div>
+  <div class="cta-bottom-right">
+    <a href="https://wa.me/5514991658080" class="btn-wa" target="_blank">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      QUERO ANALISAR MEU CASO
+    </a>
+    <p class="cta-note">Respostas rápidas e atendimento humanizado.</p>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section class="form-section">
+  <h2 class="section-title">INICIE SEU <span class="gold">ATENDIMENTO AGORA</span></h2>
+  <p class="form-subtitle">As informações abaixo nos ajudam a entender melhor o seu caso e a dar início ao seu atendimento.</p>
+  <div class="form-card">
+    <div class="form-group">
+      <label>Nome Completo <span class="req">*</span></label>
+      <input type="text" class="form-control" id="f-nome" placeholder="Ex: Maria da Silva">
+    </div>
+    <div class="form-group">
+      <label>Data de Nascimento</label>
+      <input type="date" class="form-control" id="f-nasc">
+    </div>
+    <div class="form-group">
+      <label>Cidade</label>
+      <input type="text" class="form-control" id="f-cidade" placeholder="Ex: Marília">
+    </div>
+    <div class="form-group">
+      <label>Situação <span class="req">*</span></label>
+      <div class="toggle-group">
+        <button class="toggle-btn active" onclick="selectToggle(this)">Ativo</button>
+        <button class="toggle-btn" onclick="selectToggle(this)">Aposentado</button>
+        <button class="toggle-btn" onclick="selectToggle(this)">Afastado</button>
+        <button class="toggle-btn" onclick="selectToggle(this)">Desempregado</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Qual benefício ou problema? <span class="req">*</span></label>
+      <select class="form-control" id="f-assunto">
+        <option value="">Selecione...</option>
+        <option>Aposentadoria negada</option>
+        <option>Auxílio-doença cortado</option>
+        <option>LOAS/BPC indeferido</option>
+        <option>CNIS com erros</option>
+        <option>Demora no INSS</option>
+        <option>Perícia injusta</option>
+        <option>Outro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Conte um pouco sobre sua situação</label>
+      <textarea class="form-control" id="f-msg" placeholder="Descreva brevemente o que aconteceu..."></textarea>
+    </div>
+    <button class="btn-submit" onclick="enviarWhatsApp()">Enviar e iniciar atendimento</button>
+    <p class="form-security">🔒 Seus dados são usados apenas para atendimento</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-info">
+      <div class="footer-logo">
+        <div class="logo-box">JB</div>
+        <div class="logo-text">
+          <h1>JOÃO BATISTA BERNARDO</h1>
+          <span class="oab-tag">ADVOGADO</span>
+          <span class="oab-num">OAB/SP 531.584</span>
         </div>
-    </header>
-
-    <!-- ============================================================
-         SEÇÃO 1: Hero
-         ============================================================ -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="tagline">ATENDIMENTO ESPECIALIZADO PARA SERVIDORES PÚBLICOS DO ESTADO DE SÃO PAULO</span>
-            <h2>SERVIDORES ATIVOS E APOSENTADOS - SPPREV</h2>
-            <p>Nosso objetivo é garantir que seus direitos sejam respeitados e Você pode estar recebendo abaixo do valor devido.<br/><br/>Verifique sua situação e assegure o correto pagamento de todos os seus direitos pelo Estado.</p>
-            <a href="#contato-form" class="btn btn-gold btn-large">FALE COM UM ADVOGADO</a>
+      </div>
+      <div class="footer-contacts">
+        <p class="footer-contacts-title">📞 Contato</p>
+        <div class="contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.7h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.05a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (14) 99165-8080
         </div>
-    </section>
-
-    <!-- ============================================================
-         SEÇÃO 2: O Caminho para garantir seus direitos
-         ============================================================ -->
-    <section class="secao-caminho">
-        <div class="container">
-            <div class="caminho-layout caminho-layout--single">
-                <div class="caminho-texto">
-                    <span class="section-label">ATUAÇÃO JURÍDICA VOLTADA AO SERVIDOR PÚBLICO</span>
-                    <h3>O CAMINHO PARA GARANTIR SEUS DIREITOS</h3>
-                    <p>Atuação direcionada à defesa dos direitos de servidores públicos, com foco na análise da remuneração, evolução funcional, vantagens e proventos.</p>
-                    <p>Muitos servidores recebem valores em desacordo com as normas que regem suas carreiras, o que pode gerar prejuízos de forma acumulada.</p>
-                    <p>Por isso, a análise jurídica especializada é essencial para verificar a correta aplicação das normas e identificar possíveis inconsistências nos pagamentos.</p>
-                    <div class="alerta-box">
-                        <div class="alerta-icon"><i class="fas fa-exclamation-triangle"></i></div>
-                        <div>
-                            <strong>A aplicação incorreta das normas pode fazer com que você receba valores abaixo do devido, sem a correta incorporação de vantagens, adicionais e reflexos que impactam diretamente sua remuneração e aposentadoria.</strong>
-                        </div>
-                    </div>
-                    <a href="#contato-form" class="btn btn-gold">QUERO ANALISAR MINHA SITUAÇÃO</a>
-                </div>
-            </div>
+        <div class="contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contato@joaobernardo.adv.br
         </div>
-    </section>
-
-    <!-- ============================================================
-         SEÇÃO 3: Ações Judiciais
-         ============================================================ -->
-    <section class="secao-acoes">
-        <div class="container">
-            <div class="section-intro">
-                <span class="section-label">Atuação Jurídica</span>
-                <h3>Identifique situações em que seus direitos não estão sendo corretamente aplicados</h3>
-            </div>
-            <div class="cards-grid">
-
-                <div class="card">
-                    <div class="card-icon-wrap">
-                        <i class="fas fa-search-dollar"></i>
-                    </div>
-                    <h4>MAGISTÉRIO: INCLUSÃO DO PISO SALARIAL DOCENTE NA BASE DE CÁLCULO DOS ADICIONAIS TEMPORAIS</h4>
-                    <p>O Piso Salarial Docente possui natureza remuneratória e deve integrar a base de cálculo dos adicionais temporais, como quinquênio e sexta-parte.
-                        A exclusão indevida dessa verba pode gerar diferenças salariais relevantes, com impacto direto na remuneração mensal e nos proventos de aposentadoria.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon-wrap">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h4>Licença Prêmio em Pecúnia</h4>
-                    <p>Durante a carreira, o servidor público pode adquirir o direito à licença-prêmio em razão do tempo de serviço e da assiduidade. Caso esses períodos não sejam usufruídos, especialmente no momento da aposentadoria ou desligamento, é possível a conversão em pecúnia, garantindo o recebimento dos valores correspondentes.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon-wrap">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h4>DIREITOS DO POLICIAL CIVIL: DIFERENÇA DE VENCIMENTOS E ABONO DE PERMANÊNCIA</h4>
-                    <p>O <strong>policial civil</strong> que exerce suas funções em classe ou unidade superior pode ter direito ao recebimento de diferenças de vencimentos, mesmo sem reenquadramento formal. Da mesma forma, é possível o reconhecimento do direito ao abono de permanência, ainda que não tenha sido atingida a idade mínima prevista na LC nº 1.354/2020, desde que cumprido o tempo de contribuição exigido.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon-wrap">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h4>REVISÃO DE PROVENTOS DE APOSENTADORIA</h4>
-                    <p>A revisão dos proventos de aposentadoria pode revelar inconsistências no cálculo realizado pelo Estado, resultando em valores mensais inferiores ao devido. A análise individualizada permite identificar verbas não incorporadas e garantir o recebimento correto desde a concessão do benefício.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon-wrap">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h4>ADICIONAL DE INSALUBRIDADE E PERICULOSIDADE</h4>
-                    <p>Servidores que exercem atividades em condições insalubres ou perigosas têm direito ao recebimento dos adicionais correspondentes. A negativa ou supressão indevida desses benefícios pode ser questionada judicialmente, assegurando o pagamento retroativo das diferenças devidas.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon-wrap">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <h4>OUTROS DIREITOS DO SERVIDOR PÚBLICO</h4>
-                    <p>Além das situações mencionadas, há uma ampla gama de direitos que podem estar sendo desrespeitados: progressão funcional irregular, não pagamento de vantagens pessoais, desconto indevido em folha, entre outros. Cada caso merece atenção individualizada para identificar e corrigir eventuais irregularidades.</p>
-                </div>
-
-            </div>
-            <div class="direito-cta">
-                <a href="#contato-form" class="btn btn-gold">TOQUE PARA SER ATENDIDO</a>
-            </div>
+        <div class="contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          www.joaobernardo.adv.br
         </div>
-    </section>
-
-    <!-- ============================================================
-         SEÇÃO: Atendimento Especializado
-         ============================================================ -->
-    <section class="secao-atendimento">
-        <div class="container">
-            <div class="atendimento-layout">
-                <div class="atendimento-texto">
-                    <span class="section-label section-label--light">Atendimento</span>
-                    <h3>Análise jurídica voltada à sua realidade funcional</h3>
-                    <p>Cada servidor apresenta uma realidade funcional própria, assim cada caso é analisado de forma individualizada, com atenção às suas particularidades e aspectos relevantes da sua situação.</p>
-                    <a href="https://wa.me/5500000000000" class="btn btn-gold btn-whatsapp-cta" target="_blank">
-                        <i class="fab fa-whatsapp"></i>FALE COM UM ADVOGADO
-                    </a>
-                </div>
-                <div class="atendimento-modos">
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="footer-map-col">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.5805!2d-49.94932!3d-22.21604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf5e7e3c9e4b1b%3A0x1234567890abcdef!2sR.%20Cedral%2C%20294-B%20-%20Jardim%20Mar%C3%ADlia%2C%20Mar%C3%ADlia%20-%20SP%2C%2017502-420!5e0!3m2!1spt-BR!2sbr!4v1700000000001!5m2!1spt-BR!2sbr"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="footer-map-address">
+        <div class="contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Rua Cedral, nº 294-B, Jardim Marília, CEP 17502-420 — Marília/SP
         </div>
-    </section>
-
-    <!-- ============================================================
-         FORMULÁRIO DE CONTATO
-         ============================================================ -->
-    <section class="revisao" id="contato-form">
-        <div class="container">
-            <div class="section-intro">
-                <h3>INICIE SEU ATENDIMENTO AGORA</h3>
-                <p>As informações abaixo nos ajudam a entender melhor o seu caso e a dar início ao seu atendimento.</p>
-            </div>
-
-            <div class="card form-contato">
-
-                <div class="form-group">
-                    <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
-                    <input type="text" id="nome" placeholder="Ex: Maria da Silva" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="nascimento">Data de nascimento</label>
-                    <input type="date" id="nascimento">
-                </div>
-
-                <div class="form-group">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" placeholder="Ex: Marília">
-                </div>
-
-                <div class="form-group">
-                    <label>Situação Funcional <span class="obrigatorio">*</span></label>
-                    <div class="radio-group">
-                        <label class="radio-opt" onclick="selecionarOpcao(this, 'situacao')">
-                            <input type="radio" name="situacao" value="Ativo">
-                            Ativo
-                        </label>
-                        <label class="radio-opt" onclick="selecionarOpcao(this, 'situacao')">
-                            <input type="radio" name="situacao" value="Aposentado">
-                            Aposentado
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="cargo">Cargo <span class="obrigatorio">*</span></label>
-                    <input type="text" id="cargo" placeholder="Ex: Professor, Policial Civil, Agente Administrativo">
-                </div>
-
-                <div class="form-group">
-                    <label for="mensagem">Sobre qual assunto deseja análise?</label>
-                    <textarea id="mensagem" placeholder="Conte um pouco sobre sua situação" rows="4"></textarea>
-                </div>
-
-                <button type="button" onclick="enviarWhatsApp()" class="btn btn-gold" style="width:100%; border:none; margin-top:8px;">
-                    Enviar e iniciar atendimento
-                </button>
-                <p class="form-privacy">🔒 Seus dados são usados apenas para atendimento</p>
-
-            </div>
+        <div class="contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Seg a Sex: 08h às 18h
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 João Batista Bernardo — Todos os direitos reservados</p>
+    <p><strong>Atendimento Online para Todo o Brasil 🇧🇷</strong></p>
+  </div>
+</footer>
 
-    <footer class="main-footer">
-        <div class="container footer-grid">
-
-            <div class="footer-info">
-                <div class="footer-logo">
-                    <div class="footer-monogram">JB</div>
-                </div>
-
-                <div class="footer-info-content">
-                    <div class="footer-advogados">
-                        <p class="footer-name">João Bernardo <span class="footer-name-sub">| OAB/SP 000.000</span></p>
-                    </div>
-
-                    <div class="footer-contacts">
-                        <h4>Contatos</h4>
-                        <a href="https://wa.me/5500000000000" target="_blank">
-                            <i class="fab fa-whatsapp"></i> (00) 00000-0000
-                        </a>
-                        <a href="https://mail.google.com/mail/?view=cm&to=joaobernardo.adv@gmail.com" target="_blank">
-                            <i class="far fa-envelope"></i> joaobernardo.adv@gmail.com
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d923.349627482095!2d-49.96304033036974!3d-22.224953757264988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bfd71357e1be01%3A0x2b5ea03e7c090e2d!2sR.%20Cedral%2C%20294%20-%20Jardim%20Marilia%2C%20Mar%C3%ADlia%20-%20SP%2C%2017502-420!5e0!3m2!1spt-BR!2sbr!4v1775053430741!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <address class="footer-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Rua Exemplo, nº 000, Bairro, CEP 00000-000, Marília/SP
-                </address>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container-foti">
-                <hr>
-                <div class="footer-legal">
-                    <p>© 2026 João Bernardo Advocacia</p>
-                    <a href="#" target="_blank" class="footer-dev">
-                        Desenvolvido por Victor Affonso
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
