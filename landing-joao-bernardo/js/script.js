@@ -52,7 +52,7 @@ function enviarWhatsApp() {
   texto += '*Assunto:* ' + assunto + '\n';
   if (msg)      texto += '*Detalhes:* ' + msg + '\n';
 
-  var url = 'https://wa.me/5514991658080?text=' + encodeURIComponent(texto);
+  var url = 'https://wa.me/55?text=' + encodeURIComponent(texto);
   window.open(url, '_blank');
 }
 

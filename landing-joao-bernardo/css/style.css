@@ -185,6 +185,7 @@ footer { background: #060f24; padding: 0; }
   header { padding: 12px 20px; }
   .logo-box { width: 46px; height: 46px; font-size: 16px; }
   .logo-text h1 { font-size: 13px; }
+
   .hero { grid-template-columns: 1fr; position: relative; min-height: 480px; }
   .hero-photo-wrap { position: absolute !important; inset: 0; height: 100% !important; width: 100%; z-index: 0; }
   .hero-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
@@ -192,6 +193,7 @@ footer { background: #060f24; padding: 0; }
   .hero-content { position: relative; z-index: 1; background: transparent !important; padding: 48px 24px; max-width: 520px; }
   .hero-content h2 { font-size: 34px; }
   .advocate-card { display: none; }
+
   .how { padding: 0; }
   .how-inner { flex-direction: column; gap: 0; }
   .how-image {
@@ -202,24 +204,47 @@ footer { background: #060f24; padding: 0; }
     background-position: center 30%;
     flex-shrink: 0;
   }
-  .how-image img {
-    display: none;
-  }
+  .how-image img { display: none; }
   .how-content { padding: 32px 24px 36px; }
   .how-content h2 { font-size: 18px; margin-bottom: 20px; }
+
+  /* Differentials — grade 2x2 no tablet */
   .diff-strip { padding: 28px 20px; }
-  .differentials { flex-wrap: wrap; }
-  .diff-card { border-right: none; border-bottom: 1px solid var(--gray-mid); width: 50%; flex: unset; padding: 16px 12px; }
-  .diff-card:nth-child(3) { border-bottom: 1px solid var(--gray-mid); }
-  .diff-card:last-child { border-bottom: none; }
+  .differentials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    max-width: 100%;
+  }
+  .diff-card {
+    flex: unset;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--gray-mid);
+    padding: 18px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .diff-card:nth-child(odd) { border-right: 1px solid var(--gray-mid); }
+  .diff-card:nth-child(3),
+  .diff-card:nth-child(4) { border-bottom: none; }
+  .diff-icon { width: 48px; height: 48px; }
+  .diff-texts h3 { font-size: 11px; line-height: 1.3; }
+  .diff-texts p { font-size: 11px; margin-top: 3px; }
+
   .testimonials { padding: 40px 20px; }
   .test-grid { grid-template-columns: 1fr; gap: 16px; }
+
   .cta-bottom { flex-direction: column; text-align: center; padding: 36px 20px; gap: 20px; }
   .cta-bottom-right { align-items: center; }
   .cta-bottom-text h2 { font-size: 20px; }
+  .cta-note { text-align: center; }
+
   .form-section { padding: 40px 20px; }
   .form-card { padding: 28px 20px; }
   .toggle-group { flex-wrap: wrap; }
+
   .footer-top { flex-direction: column; padding: 32px 20px; gap: 24px; align-items: stretch; }
   .footer-map-col { width: 100%; }
   .footer-map-col iframe { height: 180px; }
@@ -228,39 +253,101 @@ footer { background: #060f24; padding: 0; }
 
 /* ===== RESPONSIVE MOBILE 600px ===== */
 @media (max-width: 600px) {
-  header { padding: 10px 16px; }
-  .logo-text h1 { font-size: 12px; letter-spacing: 1px; }
-  .header-badge .texts .label { font-size: 10px; }
+
+  /* Impede overflow horizontal */
+  body, html { overflow-x: hidden; max-width: 100vw; }
+
+  /* --- Header --- */
+  header {
+    padding: 10px 14px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap: 8px;
+  }
+  .header-brasil { display: none; }
+  .header-divider { display: none; }
   .header-badge .texts .sublabel { display: none; }
+  .logo-area { gap: 8px; min-width: 0; flex-shrink: 1; }
+  .logo-box { width: 40px; height: 40px; font-size: 14px; flex-shrink: 0; }
+  .logo-text { min-width: 0; overflow: hidden; }
+  .logo-text h1 { font-size: 10px; letter-spacing: 0.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
+  .logo-text .oab-tag { font-size: 8px; letter-spacing: 2px; }
+  .logo-text .oab-num { font-size: 9px; }
+  .header-right { flex-shrink: 0; gap: 0; }
+  .header-badge { gap: 6px; }
+  .header-badge .texts .label { font-size: 9px; letter-spacing: 0.5px; white-space: nowrap; }
+  .header-badge svg { width: 24px; height: 24px; }
+
+  /* --- Hero --- */
   .hero { min-height: 420px; }
   .hero-content { padding: 36px 20px; }
   .hero-content h2 { font-size: 28px; }
   .hero-content h3 { font-size: 16px; }
   .hero-content p { font-size: 14px; margin-bottom: 20px; }
   .btn-wa { font-size: 13px; padding: 13px 20px; }
+
+  /* --- Situations — grade 2x3 --- */
   .situations { padding: 36px 16px; }
-  .situations-grid { gap: 12px; }
-  .sit-card { width: calc(50% - 6px); padding: 16px 10px 14px; }
+  .situations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 340px;
+    margin: 0 auto 28px;
+  }
+  .sit-card { width: 100%; padding: 18px 10px 14px; }
   .sit-icon { width: 56px; height: 56px; }
   .sit-card p { font-size: 11px; }
   .section-title { font-size: 16px; }
+
+  /* --- How --- */
   .how-image { height: 220px; background-position: center 30%; }
   .how-list li { font-size: 13px; }
+
+  /* --- Differentials — lista completa mobile --- */
   .diff-strip { padding: 20px 16px; }
-  .diff-card { width: 100%; border-bottom: 1px solid var(--gray-mid) !important; border-right: none !important; padding: 14px 12px; }
-  .diff-card:last-child { border-bottom: none !important; }
-  .diff-icon { width: 48px; height: 48px; }
-  .diff-texts h3 { font-size: 11px; }
-  .diff-texts p { font-size: 11px; }
+  .differentials {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .diff-card {
+    flex: unset;
+    width: 100%;
+    border-right: none !important;
+    border-bottom: 1px solid var(--gray-mid);
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+  .diff-card:nth-child(odd) { border-right: none !important; }
+  .diff-card:nth-child(3) { border-bottom: 1px solid var(--gray-mid); }
+  .diff-card:last-child { border-bottom: none; }
+  .diff-icon { width: 44px; height: 44px; flex-shrink: 0; }
+  .diff-icon svg { width: 22px; height: 22px; }
+  .diff-texts { flex: 1; min-width: 0; }
+  .diff-texts h3 { font-size: 12px; line-height: 1.3; white-space: normal; }
+  .diff-texts p { font-size: 11px; margin-top: 3px; }
+
+  /* --- Testimonials --- */
   .testimonials { padding: 36px 16px; }
   .carousel-controls { margin-top: 20px; }
+
+  /* --- CTA --- */
   .cta-bottom { padding: 32px 16px; }
   .cta-bottom-text h2 { font-size: 18px; }
+
+  /* --- Formulário --- */
   .form-section { padding: 36px 16px; }
   .form-card { padding: 24px 16px; border-radius: 10px; }
   .toggle-group { flex-wrap: wrap; gap: 8px; }
   .toggle-btn { font-size: 10px; padding: 8px 14px; }
   .btn-submit { font-size: 14px; }
+
+  /* --- Footer --- */
   .footer-top { padding: 28px 16px; gap: 20px; }
   .footer-logo .logo-box { width: 44px; height: 44px; font-size: 16px; }
   .footer-logo .logo-text h1 { font-size: 13px; }
