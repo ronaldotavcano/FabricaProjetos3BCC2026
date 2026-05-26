@@ -2,14 +2,14 @@
 import json
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_tavily import TavilySearch
 
 load_dotenv()
 
 def executar_agente_search(nome_empresa: str):   
     try:
         llm = ChatGroq(model_name="llama-3.3-70b-versatile")
-        search = TavilySearchResults(k=5)
+        search = TavilySearch(k=5)
 
         query = (
             f'"{nome_empresa}" '

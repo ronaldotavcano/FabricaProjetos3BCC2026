@@ -3,3 +3,40 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Animação de entrada para os cards */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar customizada para o tema dark */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38BDF8;
+}
+
+/* Seleção de texto com cor do accent */
+::selection {
+  background: rgba(56, 189, 248, 0.25);
+  color: #ffffff;
+}

@@ -274,3 +274,17 @@ git push origin feature/NomeDaSuaFeature
 - [TailwindCSS Docs](https://tailwindcss.com/docs)
 
 ---
+
+
+cd backend
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+# source .venv/bin/activate     # Mac/Linux
+pip install -r requirements.txt
+# Copie .env.example → .env e preencha suas chaves
+uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+
+
+cd frontend
+npm install
+npm run dev
