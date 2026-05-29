@@ -18,7 +18,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      {/* Scroll progress bar */}
       <div className="h-0.5 bg-slate-800/50 sticky top-20 z-40">
         <div
           className="h-full bg-[#38BDF8] transition-all duration-100"

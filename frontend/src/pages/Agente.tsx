@@ -28,7 +28,6 @@ function getBadgeStyle(cargo: string): string {
   return "bg-slate-600 text-white";
 }
 
-// ── Componente de contato copiável ──
 function CopyableContact({
   icon,
   value,
@@ -71,7 +70,6 @@ function CopyableContact({
   );
 }
 
-// ── Funções de exportação ──
 function exportarCSV(execs: Executivo[], empresa: string) {
   const header = "Nome,Cargo,Email,LinkedIn,Telefone,Fonte";
   const rows = execs.map(
@@ -92,7 +90,7 @@ async function copiarJSON(execs: Executivo[]) {
   await navigator.clipboard.writeText(JSON.stringify(execs, null, 2));
 }
 
-// ── Componente principal ──
+
 export default function Agente() {
   const [empresa, setEmpresa] = useState("");
   const [executivos, setExecutivos] = useState<Executivo[] | null>(null);
@@ -101,7 +99,7 @@ export default function Agente() {
   const [erro, setErro] = useState<string | null>(null);
   const [jsonCopiado, setJsonCopiado] = useState(false);
 
-  // Histórico de buscas recentes (localStorage)
+
   const [historico, setHistorico] = useState<string[]>(() => {
     try {
       return JSON.parse(localStorage.getItem("finderagent_historico") || "[]");
@@ -129,7 +127,6 @@ export default function Agente() {
       setExecutivos(data.dados.executivos);
       setNomeEmpresaResultado(data.empresa);
 
-      // Salvar no histórico
       const novoHistorico = [
         empresa.trim(),
         ...historico.filter((h) => h !== empresa.trim()),
@@ -157,7 +154,6 @@ export default function Agente() {
   return (
     <div className="min-h-[calc(100vh-160px)] p-8 flex flex-col gap-8 max-w-6xl mx-auto">
 
-      {/* ── Cabeçalho da página ── */}
       <section className="w-full bg-[#111827] rounded-3xl p-10 border border-white/5 shadow-2xl">
         <h1 className="text-4xl font-extrabold bg-linear-to-b from-[#FFFFFF] via-[#94A3B8] to-[#CBD5E1] bg-clip-text text-transparent tracking-tight mb-3">
           Agente de Busca C-Level
@@ -166,7 +162,6 @@ export default function Agente() {
           Digite o nome de uma empresa para encontrar seus executivos
         </p>
 
-        {/* Histórico de buscas recentes */}
         {historico.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-5">
             <span className="text-[#64748b] text-xs self-center">Recentes:</span>
@@ -184,7 +179,6 @@ export default function Agente() {
           </div>
         )}
 
-        {/* Campo de busca */}
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
             <input
@@ -237,7 +231,6 @@ export default function Agente() {
         </div>
       </section>
 
-      {/* ── Estado: LOADING ── */}
       {carregando && (
         <div className="flex flex-col items-center justify-center gap-4 py-16">
           <div className="w-12 h-12 rounded-full border-4 border-[#334155] border-t-[#38BDF8] animate-spin" />
@@ -246,10 +239,9 @@ export default function Agente() {
         </div>
       )}
 
-      {/* ── Estado: ERRO ── */}
+
       {erro && !carregando && (
         <div className="w-full bg-red-950/40 border border-red-500/30 rounded-2xl p-6 flex items-start gap-4">
-          <span className="text-2xl mt-0.5">⚠️</span>
           <div>
             <p className="text-red-400 font-semibold text-lg mb-1">Erro ao buscar executivos</p>
             <p className="text-red-300/80 text-sm">{erro}</p>
@@ -257,7 +249,6 @@ export default function Agente() {
         </div>
       )}
 
-      {/* ── Estado: RESULTADO VAZIO ── */}
       {!carregando && !erro && executivos !== null && executivos.length === 0 && (
         <div className="w-full bg-[#111827] border border-white/5 rounded-2xl p-10 flex flex-col items-center gap-3">
           <span className="text-4xl">🔍</span>
@@ -270,11 +261,10 @@ export default function Agente() {
         </div>
       )}
 
-      {/* ── Estado: RESULTADOS ── */}
+
       {!carregando && !erro && executivos !== null && executivos.length > 0 && (
         <section className="flex flex-col gap-5">
 
-          {/* Header dos resultados + botões de exportação */}
           <div className="flex items-center justify-between flex-wrap gap-3">
             <div className="flex items-center gap-3 flex-wrap">
               <h2 className="text-xl font-semibold text-white">
@@ -286,7 +276,6 @@ export default function Agente() {
               </span>
             </div>
 
-            {/* Botões de exportação */}
             <div className="flex gap-2">
               <button
                 onClick={() => exportarCSV(executivos, nomeEmpresaResultado)}
@@ -294,7 +283,7 @@ export default function Agente() {
                            border border-slate-700 hover:border-[#38BDF8]/40 rounded-lg px-3 py-1.5
                            transition-all duration-200"
               >
-                📥 Exportar CSV
+                Exportar CSV
               </button>
               <button
                 onClick={handleCopiarJSON}
@@ -302,12 +291,12 @@ export default function Agente() {
                            border border-slate-700 hover:border-[#38BDF8]/40 rounded-lg px-3 py-1.5
                            transition-all duration-200"
               >
-                {jsonCopiado ? "✓ Copiado!" : "📋 Copiar JSON"}
+                {jsonCopiado ? " Copiado!" : " Copiar JSON"}
               </button>
             </div>
           </div>
 
-          {/* Grid de cards com animação staggered */}
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {executivos.map((exec, index) => (
               <div
@@ -321,7 +310,7 @@ export default function Agente() {
                            transition-all duration-200 flex flex-col gap-3
                            animate-[fadeSlideUp_0.35s_ease-out]"
               >
-                {/* Nome + cargo */}
+
                 <div className="flex flex-col gap-2">
                   <p className="text-white font-semibold text-lg leading-tight">{exec.nome}</p>
                   <span
@@ -331,7 +320,6 @@ export default function Agente() {
                   </span>
                 </div>
 
-                {/* Contatos */}
                 <div className="flex flex-col gap-2 mt-1">
                   {exec.email && (
                     <CopyableContact icon="📧" value={exec.email} href={`mailto:${exec.email}`} />
@@ -344,7 +332,6 @@ export default function Agente() {
                   )}
                 </div>
 
-                {/* Fonte */}
                 {exec.fonte && (
                   <p className="text-[#64748b] text-xs mt-auto pt-3 border-t border-white/5 truncate">
                     Fonte: {exec.fonte}
