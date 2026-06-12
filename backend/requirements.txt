@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+langchain-anthropic
+langchain-community
+langchain-tavily
+requests
+pydantic
